@@ -100,3 +100,5 @@ InitTestScene*.unity*
 .idea/
 UserSettings/
 Assembly-CSharp.csproj
+UserSettings/Layouts/default-6000.dwlt
+Assets/UniversalRenderPipelineGlobalSettings.asset
