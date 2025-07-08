@@ -330,6 +330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1644233338}
   image: {fileID: 824483144}
+  nextButton: {fileID: 426593375}
 --- !u!1 &149496774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c07d32fc31f013f4c9b3ffb1368ded14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f4bc1e026042c764aad5d42e72f29754, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
