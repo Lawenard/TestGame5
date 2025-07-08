@@ -1,0 +1,49 @@
+{
+  "frames": [
+    {
+      "frameId": "f1",
+      "frameType": "Text",
+      "text": "It was a dark and stormy night…",
+      "nextId": "f2"
+    },
+    {
+      "frameId": "f2",
+      "frameType": "Speech",
+      "name": "Detective",
+      "spriteId": "det_sad",
+      "isRightSide": "false",
+      "text": "We have a mystery on our hands.",
+      "nextId": "f3"
+    },
+    {
+      "frameId": "f3",
+      "frameType": "Choice",
+      "text": "What will you do?",
+      "choices": [
+        { "text": "Investigate the room", "nextId": "f4" },
+        { "text": "Talk to the witness",  "nextId": "f5" }
+      ]
+    },
+    {
+      "frameId": "f4",
+      "frameType": "Text",
+      "text": "You search the room thoroughly.",
+      "nextId": "f6"
+    },
+    {
+      "frameId": "f5",
+      "frameType": "Speech",
+      "name": "Witness",
+      "spriteId": "wit_neutral",
+      "isRightSide": "true",
+      "text": "I saw someone leave earlier.",
+      "nextId": "f6"
+    },
+    {
+      "frameId": "f6",
+      "frameType": "End",
+      "text": "End of Chapter1",
+      "imageId": "chapter1_end"
+    }
+  ]
+}
