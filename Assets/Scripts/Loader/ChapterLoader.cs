@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Loader
 {
+    using System;
     using System.Linq;
 
     public static class StoryLoader
@@ -12,6 +13,10 @@ namespace Loader
         {
             FrameWrapperRaw wrapper = JsonUtility.FromJson<FrameWrapperRaw>(json);
             var frames = new List<Frame>();
+            
+            if (wrapper.frames == null || !wrapper.frames.Any())
+                throw new Exception($"Unable to load story from JSON. ctx: {json}");
+            
             foreach (FrameRaw raw in wrapper.frames)
             {
                 switch (raw.frameType)
@@ -30,14 +35,18 @@ namespace Loader
                         });
                         break;
                     case "Choice":
-                        var opts = new List<Choice>();
-                        if (raw.choices != null) opts.AddRange(raw.choices.Select(c => new Choice
+                        var choices = new List<Choice>();
+                        if (raw.choices != null)
                         {
-                            Text = c.text, NextId = c.nextId
-                        }));
+                            choices.AddRange(raw.choices.Select(c => new Choice
+                            {
+                                Text = c.text, NextId = c.nextId
+                            }));
+                        }
+                        else throw new Exception($"Unable to load choices for frame id: {raw.frameId}");
                         frames.Add(new ChoiceFrame
                         {
-                            Id = raw.frameId, Text = raw.text, Choices = opts.ToArray()
+                            Id = raw.frameId, Text = raw.text, Choices = choices.ToArray()
                         });
                         break;
                     case "End":
@@ -46,6 +55,8 @@ namespace Loader
                             Id = raw.frameId, Text = raw.text, ImageId = raw.imageId
                         });
                         break;
+                    default:
+                        throw new Exception($"Unknown frame type: {raw.frameType}");
                 }
             }
 

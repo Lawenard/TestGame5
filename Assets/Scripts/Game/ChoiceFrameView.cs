@@ -24,6 +24,8 @@
 
             text.text = frame.Text;
 
+            if (frame.Choices.Length < 1) throw new Exception($"frame {frame.Id} is a choice frame with no choices");
+            
             Reset();
             Populate(frame.Choices.Length - optionViews.Count);
 

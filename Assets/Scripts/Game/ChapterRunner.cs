@@ -1,5 +1,6 @@
 ﻿namespace Game
 {
+    using System;
     using System.Collections.Generic;
     using Frames;
     using Loader;
@@ -29,6 +30,9 @@
             
             if (id == null) listId++;
             else listId = frames.IndexOf(frames.Find(f => f.Id == id));
+
+            if (listId == -1) throw new Exception($"frameId {id} not found");
+            if (listId >= frames.Count) throw new Exception($"listId {listId} was out of range");
             
             ViewFrame(listId);
         }
