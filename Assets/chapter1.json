@@ -1,49 +1,186 @@
 {
   "frames": [
     {
-      "frameId": "f1",
+      "frameId": "1",
       "frameType": "Text",
-      "text": "It was a dark and stormy night…",
-      "nextId": "f2"
+      "text": "It was your first day at the office. You're suddenly approached by someone - they bump into you."
     },
     {
-      "frameId": "f2",
+      "frameId": "2",
       "frameType": "Speech",
-      "name": "Detective",
-      "spriteId": "det_sad",
+      "name": "John Novel",
+      "spriteId": "default",
       "isRightSide": "false",
-      "text": "We have a mystery on our hands.",
-      "nextId": "f3"
+      "text": "Oh, sorry for bumping into you like that."
     },
     {
-      "frameId": "f3",
+      "frameId": "3",
       "frameType": "Choice",
       "text": "What will you do?",
       "choices": [
-        { "text": "Investigate the room", "nextId": "f4" },
-        { "text": "Talk to the witness",  "nextId": "f5" }
+        { "text": "Say something rude.", "nextId": "rude1" },
+        { "text": "Ignore.",  "nextId": "ignore" },
+        { "text": "Apologize too.",  "nextId": "apology1" }
       ]
     },
     {
-      "frameId": "f4",
-      "frameType": "Text",
-      "text": "You search the room thoroughly.",
-      "nextId": "f6"
-    },
-    {
-      "frameId": "f5",
+      "frameId": "rude1",
       "frameType": "Speech",
-      "name": "Witness",
-      "spriteId": "wit_neutral",
+      "name": "You",
+      "spriteId": "default",
       "isRightSide": "true",
-      "text": "I saw someone leave earlier.",
-      "nextId": "f6"
+      "text": "You smell bad, John.",
+      "nextId": "rude2"
     },
     {
-      "frameId": "f6",
+      "frameId": "ignore",
+      "frameType": "Text",
+      "text": "You're trying to ignore John Novel, but you're making this story boring, so you have to say something.",
+      "nextId": "3"
+    },
+    {
+      "frameId": "apology1",
+      "frameType": "Speech",
+      "name": "You",
+      "spriteId": "default",
+      "isRightSide": "true",
+      "text": "No-no, I'm sorry, I blocked the entire passage.",
+      "nextId": "apology2"
+    },
+    {
+      "frameId": "rude2",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "what",
+      "isRightSide": "false",
+      "text": "What?! Like what?",
+      "nextId": "rude3"
+    },
+    {
+      "frameId": "rude3",
+      "frameType": "Choice",
+      "text": "What does John smell like?",
+      "choices": [
+        { "text": "Onions.", "nextId": "rude4" },
+        { "text": "Idiot.",  "nextId": "rude5" }
+      ]
+    },
+    {
+      "frameId": "rude4",
+      "frameType": "Speech",
+      "name": "You",
+      "spriteId": "default",
+      "isRightSide": "true",
+      "text": "Onions.",
+      "nextId": "rude6"
+    },
+    {
+      "frameId": "rude5",
+      "frameType": "Speech",
+      "name": "You",
+      "spriteId": "default",
+      "isRightSide": "true",
+      "text": "You smell like an idiot, Jonathan.",
+      "nextId": "rude7"
+    },
+    {
+      "frameId": "rude6",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "default",
+      "isRightSide": "false",
+      "text": "That's not me, that's Bob's lunch, as per usual.",
+      "nextId": "glasses1"
+    },
+    {
+      "frameId": "rude7",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "what",
+      "isRightSide": "false",
+      "text": "WHAT? That doesn't even-",
+      "nextId": "rude8"
+    },
+    {
+      "frameId": "rude8",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "anger",
+      "isRightSide": "false",
+      "text": "And you... You smell like a... A rude person.",
+      "nextId": "rudeEnd"
+    },
+    {
+      "frameId": "rudeEnd",
       "frameType": "End",
-      "text": "End of Chapter1",
-      "imageId": "chapter1_end"
+      "text": "John doesn't understand why you're such a rude person.",
+      "imageId": "ch1bad"
+    },
+    {
+      "frameId": "apology2",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "default",
+      "isRightSide": "false",
+      "text": "You're right. I'm glad you understand it was your fault.",
+      "nextId": "glasses1"
+    },
+    {
+      "frameId": "glasses1",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "smug",
+      "isRightSide": "false",
+      "text": "Anyway, you know that it's against our company's policy to wear sunglasses in the office?",
+      "nextId": "glasses2"
+    },
+    {
+      "frameId": "glasses2",
+      "frameType": "Choice",
+      "text": "What will you do?",
+      "choices": [
+        { "text": "Argue.", "nextId": "glasses3" },
+        { "text": "Take the glasses off.",  "nextId": "glasses4" }
+      ]
+    },
+    {
+      "frameId": "glasses3",
+      "frameType": "Speech",
+      "name": "You",
+      "spriteId": "default",
+      "isRightSide": "true",
+      "text": "No it's not. You're just jealous.",
+      "nextId": "jealous1"
+    },
+    {
+      "frameId": "glasses4",
+      "frameType": "Speech",
+      "name": "You",
+      "spriteId": "noglasses",
+      "isRightSide": "true",
+      "text": "I needed them to look at you, my sunshine.",
+      "nextId": "goodEnd"
+    },
+    {
+      "frameId": "goodEnd",
+      "frameType": "End",
+      "text": "You and John have settled the argument.",
+      "imageId": "ch1good"
+    },
+    {
+      "frameId": "jealous1",
+      "frameType": "Speech",
+      "name": "John Novel",
+      "spriteId": "anger",
+      "isRightSide": "false",
+      "text": "I'm not jealous.",
+      "nextId": "jealousEnd"
+    },
+    {
+      "frameId": "jealousEnd",
+      "frameType": "End",
+      "text": "John was actually jealous, but just a little bit.",
+      "imageId": "ch1bad"
     }
   ]
 }
