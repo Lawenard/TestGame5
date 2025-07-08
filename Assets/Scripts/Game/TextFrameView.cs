@@ -5,15 +5,13 @@
     using TMPro;
     using UnityEngine;
 
-    public class TextFrameView : FrameView
+    public class TextFrameView : FrameView<TextFrame>
     {
         [SerializeField] private TextMeshProUGUI text;
         
-        public void View(TextFrame frame, Action<string> callback)
+        public override void View(TextFrame frame, Action<string> callback)
         {
-            gameObject.SetActive(true);
-            
-            OnExit = callback;
+            base.View(frame, callback);
             
             text.text = frame.Text;
         }

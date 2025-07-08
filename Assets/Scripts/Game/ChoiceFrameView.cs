@@ -2,15 +2,18 @@
 {
     using System;
     using Frames;
+    using TMPro;
     using UnityEngine;
 
-    public class ChoiceFrameView : FrameView
+    public class ChoiceFrameView : FrameView<ChoiceFrame>
     {
-        public void View(ChoiceFrame frame, Action<string> callback)
+        [SerializeField] private TextMeshProUGUI text;
+        
+        public override void View(ChoiceFrame frame, Action<string> callback)
         {
-            gameObject.SetActive(true);
+            base.View(frame, callback);
             
-            OnExit = callback;
+            text.text = frame.Text;
         }
     }
 }
