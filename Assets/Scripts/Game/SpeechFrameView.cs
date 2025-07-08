@@ -14,6 +14,7 @@
         [SerializeField] private Image characterImage;
         [SerializeField] private Transform leftCharacterRoot;
         [SerializeField] private Transform rightCharacterRoot;
+        [SerializeField] private Button nextButton;
         
         public override void View(SpeechFrame frame, Action<string> callback)
         {
@@ -22,11 +23,14 @@
             speechText.text = frame.Text;
             
             nameText.text = frame.Name;
-            nameText.alignment = frame.IsRightSide ? TextAlignmentOptions.Right : TextAlignmentOptions.Left;
+            nameText.alignment = frame.IsRightSide ? TextAlignmentOptions.TopRight : TextAlignmentOptions.TopLeft;
 
-            characterImage.sprite = CharacterLoader.Load(frame.Name, frame.SpriteId);
-            characterImage.rectTransform.parent = frame.IsRightSide ? rightCharacterRoot : leftCharacterRoot;
+            characterImage.sprite = ImageLoader.LoadCharacterImage(frame.Name, frame.SpriteId);
+            characterImage.rectTransform.SetParent(frame.IsRightSide ? rightCharacterRoot : leftCharacterRoot);
             characterImage.rectTransform.anchoredPosition = Vector2.zero;
+            
+            nextButton.onClick.RemoveAllListeners();
+            nextButton.onClick.AddListener(() => OnExit?.Invoke(frame.NextId));
         }
     }
 }

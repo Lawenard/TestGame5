@@ -1,16 +1,15 @@
 ﻿namespace Loader
 {
     using System;
-    using Frames;
 
     [Serializable]
-    public class FrameWrapperRaw
+    public struct FrameWrapperRaw
     {
         public FrameRaw[] frames;
     }
     
     [Serializable]
-    public class FrameRaw
+    public struct FrameRaw
     {
         public string frameId;
         public string frameType;
@@ -19,7 +18,14 @@
         public string name;
         public string spriteId;
         public bool isRightSide;
-        public Choice[] choices;
+        public ChoiceRaw[] choices;
         public string imageId;
+
+        [Serializable]
+        public struct ChoiceRaw
+        {
+            public string text;
+            public string nextId;
+        }
     }
 }

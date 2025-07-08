@@ -1,8 +1,5 @@
 ﻿namespace Frames
 {
-    using System;
-
-    [Serializable]
     public class SpeechFrame : Frame
     {
         public string NextId { get; init; }

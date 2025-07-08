@@ -33,7 +33,7 @@ namespace Loader
                         var opts = new List<Choice>();
                         if (raw.choices != null) opts.AddRange(raw.choices.Select(c => new Choice
                         {
-                            Text = c.Text, NextId = c.NextId
+                            Text = c.text, NextId = c.nextId
                         }));
                         frames.Add(new ChoiceFrame
                         {
