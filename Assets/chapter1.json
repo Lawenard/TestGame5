@@ -10,7 +10,7 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "default",
-      "isRightSide": "false",
+      "isRightSide": false,
       "text": "Oh, sorry for bumping into you like that."
     },
     {
@@ -28,7 +28,7 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "default",
-      "isRightSide": "true",
+      "isRightSide": true,
       "text": "You smell bad, John.",
       "nextId": "rude2"
     },
@@ -43,7 +43,7 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "default",
-      "isRightSide": "true",
+      "isRightSide": true,
       "text": "No-no, I'm sorry, I blocked the entire passage.",
       "nextId": "apology2"
     },
@@ -52,9 +52,8 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "what",
-      "isRightSide": "false",
-      "text": "What?! Like what?",
-      "nextId": "rude3"
+      "isRightSide": false,
+      "text": "What?! Like what?"
     },
     {
       "frameId": "rude3",
@@ -70,7 +69,7 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "default",
-      "isRightSide": "true",
+      "isRightSide": true,
       "text": "Onions.",
       "nextId": "rude6"
     },
@@ -79,7 +78,7 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "default",
-      "isRightSide": "true",
+      "isRightSide": true,
       "text": "You smell like an idiot, Jonathan.",
       "nextId": "rude7"
     },
@@ -88,7 +87,7 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "default",
-      "isRightSide": "false",
+      "isRightSide": false,
       "text": "That's not me, that's Bob's lunch, as per usual.",
       "nextId": "glasses1"
     },
@@ -97,18 +96,16 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "what",
-      "isRightSide": "false",
-      "text": "WHAT? That doesn't even-",
-      "nextId": "rude8"
+      "isRightSide": false,
+      "text": "WHAT? That doesn't even-"
     },
     {
       "frameId": "rude8",
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "anger",
-      "isRightSide": "false",
-      "text": "And you... You smell like a... A rude person.",
-      "nextId": "rudeEnd"
+      "isRightSide": false,
+      "text": "And you... You smell like a... A rude person."
     },
     {
       "frameId": "rudeEnd",
@@ -121,18 +118,16 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "default",
-      "isRightSide": "false",
-      "text": "You're right. I'm glad you understand it was your fault.",
-      "nextId": "glasses1"
+      "isRightSide": false,
+      "text": "You're right. I'm glad you understand it was your fault."
     },
     {
       "frameId": "glasses1",
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "smug",
-      "isRightSide": "false",
-      "text": "Anyway, you know that it's against our company's policy to wear sunglasses in the office?",
-      "nextId": "glasses2"
+      "isRightSide": false,
+      "text": "Anyway, you know that it's against our company's policy to wear sunglasses in the office?"
     },
     {
       "frameId": "glasses2",
@@ -148,7 +143,7 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "default",
-      "isRightSide": "true",
+      "isRightSide": true,
       "text": "No it's not. You're just jealous.",
       "nextId": "jealous1"
     },
@@ -157,9 +152,8 @@
       "frameType": "Speech",
       "name": "You",
       "spriteId": "noglasses",
-      "isRightSide": "true",
-      "text": "I needed them to look at you, my sunshine.",
-      "nextId": "goodEnd"
+      "isRightSide": true,
+      "text": "I needed them to look at you, my sunshine."
     },
     {
       "frameId": "goodEnd",
@@ -172,9 +166,8 @@
       "frameType": "Speech",
       "name": "John Novel",
       "spriteId": "anger",
-      "isRightSide": "false",
-      "text": "I'm not jealous.",
-      "nextId": "jealousEnd"
+      "isRightSide": false,
+      "text": "I'm not jealous."
     },
     {
       "frameId": "jealousEnd",
